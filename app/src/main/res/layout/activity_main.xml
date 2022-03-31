@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.MainActivity">
+
+        <!--View: Left-Top-->
+        <View
+            android:id="@+id/viewLeftTop"
+            android:layout_width="75dp"
+            android:layout_height="50dp"
+            android:background="@color/grey"
+            app:layout_constraintEnd_toStartOf="@+id/viewRightTop"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--View: Right-Top-->
+        <View
+            android:id="@+id/viewRightTop"
+            android:layout_width="75dp"
+            android:layout_height="50dp"
+            android:background="@color/grey"
+            app:layout_constraintBottom_toBottomOf="@+id/viewLeftTop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/viewLeftTop"
+            app:layout_constraintTop_toTopOf="@+id/viewLeftTop" />
+
+        <!--View: Center-->
+        <View
+            android:id="@+id/viewCenter"
+            android:layout_width="75dp"
+            android:layout_height="50dp"
+            android:background="@color/grey"
+            app:layout_constraintBottom_toTopOf="@+id/viewLeftBottom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewLeftTop" />
+
+        <!--View: Left-Bottom-->
+        <View
+            android:id="@+id/viewLeftBottom"
+            android:layout_width="75dp"
+            android:layout_height="50dp"
+            android:background="@color/grey"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/viewRightBottom"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!--View: Right-Bottom-->
+        <View
+            android:id="@+id/viewRightBottom"
+            android:layout_width="75dp"
+            android:layout_height="50dp"
+            android:background="@color/grey"
+            app:layout_constraintBottom_toBottomOf="@+id/viewLeftBottom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/viewLeftBottom"
+            app:layout_constraintTop_toTopOf="@+id/viewLeftBottom" />
+
+        <!--ProgressBar-->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:indeterminateTint="@color/purple_200"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
